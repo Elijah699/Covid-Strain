@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+.navbar-brand :hover {
+  color: #6610f2;
+}
+
+#home {
+  color: #007bff;
+}
+
+#symptoms,
+#protection {
+  color: #000;
+}
+
+.brand__font {
+  color: #007bff;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.line-height {
+  line-height: 2.2rem;
+}
+
+.total-cases {
+  background-color: rgb(43,111,243,0.05);
+}
+
+.active-cases {
+  background-color: rgb(243,153,17,0.05);
+}
+
+.recovered {
+  background-color: rgb(22,180,66,0.05);
+}
+
+.total-deaths {
+  background-color: rgb(170,42,42,0.05);
+}
