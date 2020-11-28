@@ -34,379 +34,492 @@
       <!-- Addition of CSS stylesheet -->
       <link rel="stylesheet" href="./style.css" />
     </head>
+
     <body>
-      <!-- NAVBAR -->
-      <nav class="navbar navbar-expand-sm navbar-light bg-white px-1">
-        <!-- NAVBAR BRAND -->
-        <a class="navbar-brand ml-2" href="#"
-          ><img src="./assets/images/logo.png" alt="virus image" />
-          <strong class="brand__font">Cov19Strain</strong></a
-        >
-        <!-- NAVBAR TOGGLER -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarLink"
-          aria-controls="navbarLink"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <section id="body">
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-sm navbar-light bg-white px-1">
+          <!-- NAVBAR BRAND -->
+          <a class="navbar-brand ml-2 text-primary" href="#"
+            ><img src="./assets/images/logo.png" alt="virus image" />
+            <strong>Cov19Strain</strong></a
+          >
+          <!-- NAVBAR TOGGLER -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarLink"
+            aria-controls="navbarLink"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <!-- NAVBAR LINKS -->
-        <div
-          class="collapse text-center bg-white navbar-collapse"
-          id="navbarLink"
-        >
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item mx-2 active">
-              <a id="home" class="nav-link home" href="#home">HOME</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a id="symptoms" class="nav-link" href="#symptoms">SYMPTOMS</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a id="protection" class="nav-link" href="#protection"
-                >PROTECTION</a
-              >
-            </li>
-          </ul>
+          <!-- NAVBAR LINKS -->
+          <div
+            class="collapse text-center bg-white navbar-collapse"
+            id="navbarLink"
+          >
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item mx-2 active">
+                <a class="nav-link home" href="#home">HOME</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#symptoms">SYMPTOMS</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#protection">PROTECTION</a>
+              </li>
+            </ul>
 
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item mb-2 mx-2">
-              Updated: <span id="updated__date"> </span>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <header class="py-3">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <h4 class="mb-3">COVID-19 Tracker</h4>
-            </div>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item mb-2 mx-2">
+                Updated: <span class="updated__date"> </span>
+              </li>
+            </ul>
           </div>
+        </nav>
 
-          <div class="row bg-white rounded-top p-2">
-            <!-- Total Cases -->
-            <div class="col-md-6 col-lg-3 my-3">
-              <div class="rounded text-center total-cases">
-                <h6>Total Cases</h6>
-                <h3 class="" id="totalCases"></h3>
-                <p class="" id="newTotalCases"></p>
+        <header class="py-3">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <h4 class="mb-3">COVID-19 Tracker</h4>
               </div>
             </div>
 
-            <!-- Active Cases -->
-            <div class="col-md-6 col-lg-3 my-3">
-              <div class="rounded text-center active-cases">
-                <h6>Active Cases</h6>
-                <h3 class="" id="activeCases"></h3>
-                <p class="" id="newActiveCases"></p>
-              </div>
-            </div>
-            <!-- Recovered Cases -->
-            <div class="col-md-6 col-lg-3 my-3">
-              <div class="rounded text-center recovered">
-                <h6>Recovered</h6>
-                <h3 class="" id="recoveredCases"></h3>
-                <p class="" id="newrecoveredCases"></p>
-              </div>
-            </div>
-
-            <!-- Total Deaths -->
-            <div class="col-md-6 col-lg-3 my-3">
-              <div class="rounded text-center total-deaths">
-                <h6>Total Deaths</h6>
-                <h3 class="" id="deathCases"></h3>
-                <p class="" id="newdeathCases"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <section id="" class="py-4">
-        <div class="container">
-          <div class="row bg-white rounded-top p-2">
-            <div class="col">
-              <h4>Top Affected Countries</h4>
-              <p class="">Updated: <span id="updated__date"> </span></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SYMPTOMS -->
-
-      <section id="symptoms" class="py-4">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 text-center d-none d-md-inline-block">
-              <img
-                src="/assets/symptoms_images/doctor.png"
-                class="img-fluid"
-                alt="Doctor's image"
-              />
-            </div>
-            <div class="col-md-8">
-              <h5 class="text-danger my-3">
-                <span
-                  style="background-color: rgba(170, 42, 42, 0.05)"
-                  class="rounded-pill py-2 px-3"
-                  >Corona Virus Symptoms</span
-                >
-              </h5>
-              <h1>What are the symptoms?</h1>
-              <p class="text-justify line-height">
-                People may be sick with the virus for 1 to 14 days before
-                developing symptoms. The most common symptoms of coronavirus
-                disease (COVID-19) are fever, tiredness, and dry cough. Less
-                common symptoms are aches and pains, sore throat, diarrhoea,
-                conjuctivitis, headache, loss of taste or smell, a rash on skin
-                or discolouration of fingers or toes. Serious symptoms are
-                difficulty in brething or shortness of breath, chest pain or
-                pressure, loss of speech movement. Most people (about 80%)
-                recover from the disease without needing special treatment. More
-                rarely, the disease can be serious and even fatal. Older people,
-                and people with other medical conditions (such as asthma,
-                diabetes, or heart disease), may be more vulnerable to becoming
-                severely ill.
-              </p>
-              <div class="rounded-top bg-white p-3 my-2">
-                <h5><strong> Most Common Symptoms</strong></h5>
-                <div class="text-danger">
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i>
-                    Tiredness</span
-                  >
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i> Dry
-                    Cough</span
-                  >
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i>
-                    Fever</span
-                  >
+            <div class="row bg-white rounded-top p-2">
+              <!-- Total Cases -->
+              <div class="col-md-6 col-lg-3 my-3 pos__rel">
+                <div class="rounded text-center total__cases m-2 p-2">
+                  <h6>Total Cases</h6>
+                  <h3 class="text-primary" id="totalCases"></h3>
+                  <p class="">+<span id="newTotalCases"></span></p>
                 </div>
+                <div class="total__cases tracker__circle"></div>
               </div>
-              <div class="rounded-top bg-white p-3 my-2 line-height">
-                <h5><strong>Less Common Symptoms</strong></h5>
-                <div class="text-danger">
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i> Aches and
-                    Pains</span
-                  >
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i> Chills
-                  </span>
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i>
-                    Headache</span
-                  >
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i>
-                    Conjuctivitis(pink eye)</span
-                  >
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i> Loss of
-                    Taste or Smell</span
-                  >
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i> A rash on
-                    skin or discolouration of fingers or toes</span
-                  >
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i> Sore
-                    Throat</span
-                  >
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i> Runny
-                    Nose</span
-                  >
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i> Diarrhoea
-                  </span>
+
+              <!-- Active Cases -->
+              <div class="col-md-6 col-lg-3 my-3 pos__rel">
+                <div class="rounded text-center active__cases m-2 p-2">
+                  <h6>Active Cases</h6>
+                  <h3 class="text__orange" id="activeCases"></h3>
+                  <p class="">+<span id="newActiveCases"> </span></p>
                 </div>
+                <div class="active__cases tracker__circle"></div>
               </div>
-              <div class="rounded-top bg-white p-3 my-2 line-height">
-                <h5><strong>Serious Symptoms</strong></h5>
-                <div class="text-danger">
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i> Trouble
-                    breathing</span
-                  >
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i> Persistent
-                    chest pain or pressure</span
-                  >
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i> Loss of
-                    speech or movement</span
-                  >
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i> Inability
-                    to stay awake
-                  </span>
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i> New
-                    confusion
-                  </span>
-                  <span class="mr-3 d-inline-block"
-                    ><i class="text-success fas fa-minus-circle"></i> Blue lips
-                    or face</span
-                  >
+
+              <!-- Recovered Cases -->
+              <div class="col-md-6 col-lg-3 my-3 pos__rel">
+                <div class="rounded text-center recovered m-2 p-2">
+                  <h6>Recovered</h6>
+                  <h3 class="text-success" id="recoveredCases"></h3>
+                  <p class="">+<span id="newRecoveredCases"></span></p>
                 </div>
+                <div class="recovered tracker__circle"></div>
+              </div>
+
+              <!-- Total Deaths -->
+              <div class="col-md-6 col-lg-3 my-3 pos__rel">
+                <div class="rounded text-center total__deaths m-2 p-2">
+                  <h6>Total Deaths</h6>
+                  <h3 class="text-danger" id="deathCases"></h3>
+                  <p class="">+<span id="newDeathCases"></span></p>
+                </div>
+                <div class="total__deaths tracker__circle"></div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </header>
 
-      <!-- PROTECTION -->
+        <section class="py-4">
+          <div class="container bg-white rounded-top">
+            <div class="row p-2">
+              <div class="col-lg-8">
+                <div class="row p-2">
+                  <div class="col">
+                    <h4>Top Affected Countries</h4>
+                    <p>Updated: <span class="updated__date"> </span></p>
+                  </div>
+                </div>
+                <div class="row p-2">
+                  <div class="col-md-6 rounded border py-2">
+                    <h5>Countries</h5>
+                    <ul class="list-group">
+                      <li
+                        id="First"
+                        class="list-group-item cursor font-weight-bold border-0 d-flex align-items-center"
+                      ></li>
+                      <li
+                        id="Second"
+                        class="list-group-item cursor font-weight-bold border-0 d-flex align-items-center"
+                      ></li>
+                      <li
+                        id="Third"
+                        class="list-group-item cursor font-weight-bold border-0 d-flex align-items-center"
+                      ></li>
+                      <li
+                        id="Fourth"
+                        class="list-group-item cursor font-weight-bold border-0 d-flex align-items-center"
+                      ></li>
+                      <li
+                        id="Fifth"
+                        class="list-group-item cursor font-weight-bold border-0 d-flex align-items-center"
+                      ></li>
+                    </ul>
+                  </div>
 
-      <section id="protection" class="py-5">
-        <div class="container bg-white rounded-top pr-3 py-5">
-          <div class="row">
-            <div class="col-md-7">
-              <h1>How can I protect myself from Covid-19?</h1>
-              <p class="line-height text-justify">
-                Coronavirus disease spreads primarily through contact with an
-                infected person when they cough or sneeze. It also spreads when
-                a person touches a surface or object that has the virus on it,
-                then touches their eyes, nose, or mouth.
-              </p>
-              <h4 class="my-3">
-                What should <span class="text-success">I do?</span>
-              </h4>
-              <div class="row pt-3 mx-auto text-center">
-                <div class="border rounded col-md-4 col-lg-4 pt-3 my-2 mx-auto">
-                  <img
-                    src="/assets/protection_images/facemask.png"
-                    alt="face-mask"
-                    class="img-fluid"
-                  />
-                  <h6 class="py-3">Wear a facemask</h6>
-                </div>
-                <div class="border rounded col-md-4 col-lg-4 pt-3 my-2 mx-auto">
-                  <img
-                    src="/assets/protection_images/facetouch.png"
-                    alt="face-touch"
-                    class="img-fluid"
-                  />
-                  <h6 class="py-3">Don’t touch your face</h6>
-                </div>
-                <div class="border rounded col-md-4 col-lg-4 pt-3 my-2 mx-auto">
-                  <img
-                    src="/assets/protection_images/handshake.png"
-                    alt="hand-shake"
-                    class="img-fluid"
-                  />
-                  <h6 class="py-3">Avoid hand contact</h6>
+                  <div class="col-md-6 py-2">
+                    <h6 id="countryName" class="font-weight-bold"></h6>
+                    <div class="row">
+                      <div class="col-5 text-center rounded border pt-2 m-2">
+                        <h6>Total Cases</h6>
+                        <p
+                          class="text-primary font-weight-bold pt-3"
+                          id="countryTotalCase"
+                        ></p>
+                      </div>
+
+                      <div class="col-5 text-center rounded border pt-2 m-2">
+                        <h6>Active Cases</h6>
+                        <p
+                          class="text-danger font-weight-bold pt-3"
+                          id="countryActiveCase"
+                        ></p>
+                      </div>
+
+                      <div class="col-5 text-center rounded border pt-2 m-2">
+                        <h6>Recovered</h6>
+                        <p
+                          class="text-success font-weight-bold pt-3"
+                          id="countryRecoveredCase"
+                        ></p>
+                      </div>
+
+                      <div class="col-5 text-center rounded border pt-2 m-2">
+                        <h6>Total Deaths</h6>
+                        <p
+                          class="text-danger font-weight-bold pt-3"
+                          id="countryDeathsCase"
+                        ></p>
+                      </div>
+
+                      <div class="col-5 text-center rounded border pt-2 m-2">
+                        <h6>New Cases</h6>
+                        <p
+                          class="text-primary font-weight-bold pt-3"
+                          id="countryNewCase"
+                        ></p>
+                      </div>
+
+                      <div class="col-5 text-center rounded border pt-2 m-2">
+                        <h6>New Deaths</h6>
+                        <p
+                          class="text-danger font-weight-bold pt-3"
+                          id="countryNewDeaths"
+                        ></p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="row pb-2 mx-auto text-center">
-                <div class="border rounded col-md-3 mx-auto pt-3 my-2">
-                  <img
-                    src="/assets/protection_images/distancing.png"
-                    alt="social-distance"
-                    class="img-fluid"
-                  />
-                  <h6 class="py-3">Avoid hand contact</h6>
-                </div>
-                <div class="border rounded col-md-3 mx-auto pt-3 my-2">
-                  <img
-                    src="/assets/protection_images/lockdown.png"
-                    alt="lockdown"
-                    class="img-fluid"
-                  />
-                  <h6 class="py-3">Stay at home if you can</h6>
-                </div>
+
+              <div class="col-lg-4 d-none d-lg-inline-block">
+                <img
+                  src="/assets/images/map.png"
+                  alt="World Map image"
+                  class="img-fluid"
+                />
               </div>
-            </div>
-            <div class="col-md-5 d-none d-md-inline-block">
-              <img
-                src="/assets/protection_images/mask-man.png"
-                alt="Mask-man"
-              />
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="py-4" id="footer">
-        <div class="container-fluid py-4 bg-white">
-          <div class="row py-4 mx-4">
-            <div class="col-lg-4 mx-auto px-3">
-              <div class="mb-2">
-                <img src="/assets/images/logo.png" alt="virus image" />
-                <strong class="brand__font">Cov19Strain</strong>
+        <!-- SYMPTOMS -->
+
+        <section id="symptoms" class="py-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 text-center d-none d-md-inline-block">
+                <img
+                  src="/assets/symptoms_images/doctor.png"
+                  class="img-fluid"
+                  alt="Doctor's image"
+                />
               </div>
-              <div>
-                <h6><strong>Source:</strong></h6>
-                <p class="text-justify">
-                  The infos on this this webpage were crawled from WHO, images
-                  were downloaded from Pixaybay and Pexels, Icons were
-                  downloaded from Iconfinder and Flaticons.
+              <div class="col-md-8">
+                <h5 class="text-danger my-3">
+                  <span class="rounded-pill py-2 px-3 symptoms__bg__color"
+                    >Corona Virus Symptoms</span
+                  >
+                </h5>
+                <h1>What are the symptoms?</h1>
+                <p class="text-justify line__height">
+                  People may be sick with the virus for 1 to 14 days before
+                  developing symptoms. The most common symptoms of coronavirus
+                  disease (COVID-19) are fever, tiredness, and dry cough. Less
+                  common symptoms are aches and pains, sore throat, diarrhoea,
+                  conjuctivitis, headache, loss of taste or smell, a rash on
+                  skin or discolouration of fingers or toes. Serious symptoms
+                  are difficulty in brething or shortness of breath, chest pain
+                  or pressure, loss of speech movement. Most people (about 80%)
+                  recover from the disease without needing special treatment.
+                  More rarely, the disease can be serious and even fatal. Older
+                  people, and people with other medical conditions (such as
+                  asthma, diabetes, or heart disease), may be more vulnerable to
+                  becoming severely ill.
                 </p>
+                <div class="rounded-top bg-white p-3 my-2">
+                  <h5><strong> Most Common Symptoms</strong></h5>
+                  <div class="text-danger">
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i>
+                      Tiredness</span
+                    >
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i> Dry
+                      Cough</span
+                    >
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i>
+                      Fever</span
+                    >
+                  </div>
+                </div>
+                <div class="rounded-top bg-white p-3 my-2 line__height">
+                  <h5><strong>Less Common Symptoms</strong></h5>
+                  <div class="text-danger">
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i> Aches
+                      and Pains</span
+                    >
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i> Chills
+                    </span>
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i>
+                      Headache</span
+                    >
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i>
+                      Conjuctivitis(pink eye)</span
+                    >
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i> Loss of
+                      Taste or Smell</span
+                    >
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i> A rash
+                      on skin or discolouration of fingers or toes</span
+                    >
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i> Sore
+                      Throat</span
+                    >
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i> Runny
+                      Nose</span
+                    >
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i>
+                      Diarrhoea
+                    </span>
+                  </div>
+                </div>
+                <div class="rounded-top bg-white p-3 my-2 line__height">
+                  <h5><strong>Serious Symptoms</strong></h5>
+                  <div class="text-danger">
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i> Trouble
+                      breathing</span
+                    >
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i>
+                      Persistent chest pain or pressure</span
+                    >
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i> Loss of
+                      speech or movement</span
+                    >
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i>
+                      Inability to stay awake
+                    </span>
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i> New
+                      confusion
+                    </span>
+                    <span class="mr-3 d-inline-block"
+                      ><i class="text-success fas fa-minus-circle"></i> Blue
+                      lips or face</span
+                    >
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div class="col-lg-4 mx-auto px-5">
-              <h5><strong class="brand__font">Useful Links</strong></h5>
-              <div class="my-2">
-                <a
-                  href="https://www.who.int/health-topics/coronavirus#tab=tab_1"
-                  target="_blank"
-                  ><i class="fas fa-link"></i>
-                  WHO Information
-                </a>
+        <!-- PROTECTION -->
+
+        <section id="protection" class="py-5">
+          <div class="container bg-white rounded-top pr-3 py-5">
+            <div class="row">
+              <div class="col-md-7">
+                <h1>How can I protect myself from Covid-19?</h1>
+                <p class="line__height text-justify">
+                  Coronavirus disease spreads primarily through contact with an
+                  infected person when they cough or sneeze. It also spreads
+                  when a person touches a surface or object that has the virus
+                  on it, then touches their eyes, nose, or mouth.
+                </p>
+                <h4 class="my-3">
+                  What should <span class="text-success">I do?</span>
+                </h4>
+                <div class="row pt-3 mx-auto text-center">
+                  <div
+                    class="border rounded col-md-4 col-lg-4 pt-3 my-2 mx-auto"
+                  >
+                    <img
+                      src="/assets/protection_images/facemask.png"
+                      alt="face-mask"
+                      class="img-fluid"
+                    />
+                    <h6 class="py-3">Wear a facemask</h6>
+                  </div>
+                  <div
+                    class="border rounded col-md-4 col-lg-4 pt-3 my-2 mx-auto"
+                  >
+                    <img
+                      src="/assets/protection_images/facetouch.png"
+                      alt="face-touch"
+                      class="img-fluid"
+                    />
+                    <h6 class="py-3">Don’t touch your face</h6>
+                  </div>
+                  <div
+                    class="border rounded col-md-4 col-lg-4 pt-3 my-2 mx-auto"
+                  >
+                    <img
+                      src="/assets/protection_images/handshake.png"
+                      alt="hand-shake"
+                      class="img-fluid"
+                    />
+                    <h6 class="py-3">Avoid hand contact</h6>
+                  </div>
+                </div>
+                <div class="row pb-2 mx-auto text-center">
+                  <div class="border rounded col-md-3 mx-auto pt-3 my-2">
+                    <img
+                      src="/assets/protection_images/distancing.png"
+                      alt="social-distance"
+                      class="img-fluid"
+                    />
+                    <h6 class="py-3">Avoid hand contact</h6>
+                  </div>
+                  <div class="border rounded col-md-3 mx-auto pt-3 my-2">
+                    <img
+                      src="/assets/protection_images/lockdown.png"
+                      alt="lockdown"
+                      class="img-fluid"
+                    />
+                    <h6 class="py-3">Stay at home if you can</h6>
+                  </div>
+                </div>
               </div>
-              <div class="my-2">
-                <a
-                  href="https://en.wikipedia.org/wiki/Coronavirus_disease_2019"
-                  target="_blank"
-                  ><i class="fas fa-link"></i>
-                  Covid 19 Wikipedia
-                </a>
+              <div class="col-md-5 d-none d-md-inline-block">
+                <img
+                  src="/assets/protection_images/mask-man.png"
+                  alt="Mask-man"
+                />
               </div>
             </div>
+          </div>
+        </section>
 
-            <div class="col-lg-4 mx-auto px-3">
-              <h6>
-                <strong class="brand__font">Emergency Numbers to call</strong>
-              </h6>
-              <div>
-                <a href="tel:+2348030000000"
-                  ><span class="fa fa-phone contact email"></span>
-                  +2348030000000</a
-                >
+        <section class="py-4 pos__rel" id="footer">
+          <div class="container-fluid py-4 bg-white">
+            <div class="row py-4 mx-4">
+              <div class="col-lg-4 mx-auto px-3">
+                <div class="mb-2">
+                  <img src="/assets/images/logo.png" alt="virus image" />
+                  <strong class="brand__font">Cov19Strain</strong>
+                </div>
+                <div>
+                  <h6><strong>Source:</strong></h6>
+                  <p class="text-justify">
+                    The infos on this this webpage were crawled from WHO, images
+                    were downloaded from Pixaybay and Pexels, Icons were
+                    downloaded from Iconfinder and Flaticons.
+                  </p>
+                </div>
               </div>
-              <div>
-                <a href="tel:+5739 00030300"
-                  ><span class="fa fa-phone contact email"></span> +5739
-                  00030300</a
-                >
+
+              <div class="col-lg-4 mx-auto lg-px-5">
+                <h5><strong class="brand__font">Useful Links</strong></h5>
+                <div class="my-2">
+                  <a
+                    href="https://www.who.int/health-topics/coronavirus#tab=tab_1"
+                    target="_blank"
+                    ><i class="fas fa-link"></i>
+                    WHO Information
+                  </a>
+                </div>
+                <div class="my-2">
+                  <a
+                    href="https://en.wikipedia.org/wiki/Coronavirus_disease_2019"
+                    target="_blank"
+                    ><i class="fas fa-link"></i>
+                    Covid 19 Wikipedia
+                  </a>
+                </div>
               </div>
+
+              <div class="col-lg-4 mx-auto px-3">
+                <h6>
+                  <strong class="brand__font">Emergency Numbers to call</strong>
+                </h6>
+                <div>
+                  <a href="tel:+2348030000000"
+                    ><span class="fa fa-phone contact email"></span>
+                    +2348030000000</a
+                  >
+                </div>
+                <div>
+                  <a href="tel:+5739 00030300"
+                    ><span class="fa fa-phone contact email"></span> +5739
+                    00030300</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="text-center">
+          <small
+            >Developed with <span class="text-danger">❤</span> by
+            <span
+              ><a
+                href="https://elijah699.github.io/Simple-Portfolio/index.html"
+                target="_blank"
+                >Elijah Edun.</a
+              ></span
+            ></small
+          >
+        </div>
+      </section>
+
+      <section id="loading" class="d-none bg-white pos__abs">
+        <div class="container my-5">
+          <div class="row my-5">
+            <div class="col-md-6 align-items-center text-center mx-auto my-5">
+              <div class="lds-hourglass"></div>
             </div>
           </div>
         </div>
       </section>
-      <div class="text-center">
-        <small
-          >Developed with <span class="text-danger">❤</span> by
-          <span
-            ><a
-              href="https://elijah699.github.io/Simple-Portfolio/index.html"
-              target="_blank"
-              >Elijah Edun.</a
-            ></span
-          ></small
-        >
-      </div>
 
       <!-- Addition of Bootstrap Jquery & Popper Plug-in -->
       <script
