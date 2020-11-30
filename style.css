@@ -106,3 +106,9 @@ body {
   top: 0px;
   width: 100vw;
 }
+
+.countries__button {
+  background-color: #7CC1FF;
+  font-weight: bolder;
+  width: 100%;
+}
