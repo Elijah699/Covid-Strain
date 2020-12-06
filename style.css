@@ -107,8 +107,13 @@ body {
   width: 100vw;
 }
 
-.countries__button {
-  background-color: #7CC1FF;
-  font-weight: bolder;
-  width: 100%;
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  .hide {
+    display: none;
+  }
 }
